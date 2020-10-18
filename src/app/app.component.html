@@ -1,19 +1,23 @@
-<nav>
-  <p>WebDziekanat</p>
-  <ul>
-    <li><a href="#">VIRTUL</a></li>
-    <li><a href="#">E-MAIL</a></li>
-    <li><a href="#">WIKAMP</a></li>
-    <li>
-      <a href="#">YOUR ACCOUNT</a>
-      <ul>
-        <li>
-          <a href="#">EDIT</a>
-        </li>
-        <li>
-          <a href="#">LOG OUT</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<div class="main-grid">
+  <nav>
+    <ul class="menu-bar">
+      <li class="menu-element"><a href="#">VIRTUL</a></li>
+      <li class="menu-element"><a href="#">E-MAIL</a></li>
+      <li class="menu-element"><a href="#">WIKAMP</a></li>
+      <li class="menu-element">
+        <a href="#">YOUR ACCOUNT</a>
+        <ul class="submenu">
+          <li class="submenu-element">
+            <a href="#">EDIT</a>
+          </li>
+          <li class="submenu-element">
+            <a href="#">LOG OUT</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.panel-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 100px;
+  grid-gap: 20px;
+}
+
+.panel {
+  background-color: darkred;
+  padding: 30px 30px;
+  text-align: center;
+}
+
+.panel a {
+  padding: 30px;
+}
+
+@media screen and (min-width: 736px) {
+  .panel-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
