@@ -1,17 +1,37 @@
 <div class="main-grid">
   <nav>
     <ul class="menu-bar">
-      <li class="menu-element"><a href="#">VIRTUL</a></li>
-      <li class="menu-element"><a href="#">E-MAIL</a></li>
-      <li class="menu-element"><a href="#">WIKAMP</a></li>
+      <li class="menu-element">
+        <a><img src="assets/logo.jpeg" alt="TUL Logo" height="40"></a>
+      </li>
+      <li class="menu-element">
+        <a href="https://virtul.p.lodz.pl/login">VIRTUL</a>
+      </li>
+      <li class="menu-element">
+        <a href="https://poczta.p.lodz.pl">E-MAIL</a>
+      </li>
+      <li class="menu-element">
+        <a href="https://edu.p.lodz.pl/login">WIKAMP</a>
+      </li>
       <li class="menu-element">
         <a href="#">YOUR ACCOUNT</a>
         <ul class="submenu">
           <li class="submenu-element">
-            <a href="#">EDIT</a>
+            <a href="#">PROGRAMMES</a>
+            <ul class="programmes">
+              <li class="programme" *ngFor="let programme of programmes">
+                <a href="#">{{programme.name}}</a>
+              </li>
+            </ul>
           </li>
           <li class="submenu-element">
-            <a href="#">LOG OUT</a>
+            <a href="#">EXAM ENROLLMENTS</a>
+          </li>
+          <li class="submenu-element">
+            <a href="#">PE ENROLLMENTS</a>
+          </li>
+          <li class="submenu-element">
+          <a href="#">LOG OUT</a>
           </li>
         </ul>
       </li>
