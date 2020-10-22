@@ -1,0 +1,59 @@
+<div class="margins">
+  <div>
+    <h3 (click)="changeVisibility('--general-visibility')">GENERAL</h3>
+    <div class="general-box">
+      DATA ON COLLEGE
+    </div>
+  </div>
+  <div>
+    <h3 (click)="changeVisibility('--programmes-visibility')">RECORDS</h3>
+    <div class="programmes-box">
+      <nav class="programme-menu">
+        <ul>
+          <li class="programme">
+            <a (click)="setProgramme('Robotics')">Robotics</a>
+          </li>
+          <li>
+            <a (click)="setProgramme('Physics')">Physics</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <label for="semesters">Choose semester</label>
+        <select id="semesters">
+          <optgroup label="First year">
+            <option (click)="setSemester(1)">1</option>
+            <option *ngIf="programme == 'Robotics'" (click)="setSemester(2)">2</option>
+          </optgroup>
+          <optgroup *ngIf="programme == 'Robotics'" label="Second year">
+            <option (click)="setSemester(3)">3</option>
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <th>Course</th>
+            <th>ECTS</th>
+            <th>Note</th>
+          </tr>
+          <tr>
+            <th>subject1</th>
+            <th>5</th>
+            <th>4</th>
+          </tr>
+          <tr>
+            <th>subject2</th>
+            <th>3</th>
+            <th>5</th>
+          </tr>
+          <tr>
+            <th>subject3</th>
+            <th>6</th>
+            <th>3</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

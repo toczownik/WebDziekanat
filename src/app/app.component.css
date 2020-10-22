@@ -14,7 +14,6 @@ nav {
 }
 
 .menu-element {
-  list-style: none;
   position: relative;
   font-weight: bold;
 }
@@ -42,7 +41,6 @@ nav {
 }
 
 .submenu-element {
-  list-style: none;
   position: relative;
 }
 
@@ -52,22 +50,6 @@ nav {
 
 .submenu-element a:hover {
   position: relative;
-}
-
-.programmes {
-  display: none;
-  position: absolute;
-  background-color: darkred;
-  top: 0;
-  right: 0;
-  -ms-transform: translate(100%,0);
-  -webkit-transform: translate(100%,0);
-  transform: translate(100%,0);
-  list-style: none;
-}
-
-.submenu-element:hover .programmes {
-  display: block;
 }
 
 @media screen and (min-width: 736px){

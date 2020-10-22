@@ -1,0 +1,39 @@
+:root {
+  --general-visibility: 'none';
+  --programmes-visibility: 'none';
+}
+
+.margins {
+  padding: 50px;
+}
+
+.margins div {
+  background-color: darkgray;
+}
+
+.general-box {
+  display: var(--general-visibility);
+}
+
+.programmes-box {
+  display: var(--programmes-visibility);
+}
+
+.programme-menu {
+  padding: 0;
+}
+
+.programme-menu ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.programme {
+  align-content: center;
+}
+
+@media screen and (min-width: 736px) {
+  .programme-menu {
+    grid-template-columns: 1fr 1fr;
+  }
+}

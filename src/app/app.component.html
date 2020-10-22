@@ -2,7 +2,9 @@
   <nav>
     <ul class="menu-bar">
       <li class="menu-element">
-        <a><img src="assets/logo.jpeg" alt="TUL Logo" height="40"></a>
+        <a [routerLink]="'/home'">
+          <img src="assets/logo.jpeg" alt="TUL Logo" height="40">
+        </a>
       </li>
       <li class="menu-element">
         <a href="https://virtul.p.lodz.pl/login">VIRTUL</a>
@@ -17,12 +19,7 @@
         <a href="#">YOUR ACCOUNT</a>
         <ul class="submenu">
           <li class="submenu-element">
-            <a href="#">PROGRAMMES</a>
-            <ul class="programmes">
-              <li class="programme" *ngFor="let programme of programmes">
-                <a href="#">{{programme.name}}</a>
-              </li>
-            </ul>
+            <a [routerLink]="'/programmes'">PROGRAMMES</a>
           </li>
           <li class="submenu-element">
             <a href="#">EXAM ENROLLMENTS</a>
