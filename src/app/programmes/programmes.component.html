@@ -1,35 +1,66 @@
+<!--TODO: FIX INCORRECT LAYOUT AFTER FIRST LOADING-->
+
 <div class="margins">
+  <nav class="programme-menu">
+    <ul>
+      <li class="programme">
+        <a (click)="setProgramme('Robotics')">Robotics</a>
+      </li>
+      <li class="programme">
+        <a (click)="setProgramme('Physics')">Physics</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="programmes-box">
+    <label for="semesters">Choose semester</label>
+    <select id="semesters">
+      <optgroup label="First year">
+        <option (click)="setSemester(1)">1</option>
+        <option *ngIf="programme == 'Robotics'" (click)="setSemester(2)">2</option>
+      </optgroup>
+      <optgroup *ngIf="programme == 'Robotics'" label="Second year">
+        <option (click)="setSemester(3)">3</option>
+      </optgroup>
+    </select>
+  </div>
   <div>
-    <h3 (click)="changeVisibility('--general-visibility')">GENERAL</h3>
+    <h3 (click)="changeVisibility('--general-visibility')">{{programme}}</h3>
     <div class="general-box">
-      DATA ON COLLEGE
+      <div>
+        <h5>GENERAL</h5>
+        <div>
+          <div>Faculty: WEEIA</div>
+          <div>Course: {{programme}}</div>
+          <div>Mode of study: full-time</div>
+          <div>Length of studies: 3</div>
+          <div>Main index: 821378</div>
+        </div>
+      </div>
+      <div>
+        <h5>DATA VALID</h5>
+        <div>
+          <div>Current year: 2</div>
+          <div>Current semester: 3</div>
+          <div>Annual registration: full registration</div>
+          <div>Semester: 2020/2021 Z</div>
+          <div>Status: full registration</div>
+          <div>Semester qualification: positive</div>
+        </div>
+      </div>
+      <div>
+        <h5>AVERAGE</h5>
+        <div>
+          <div>In this semester: 4.21</div>
+          <div>In this programme: 3.99</div>
+          <div>ECTS points: 60/60</div>
+        </div>
+      </div>
     </div>
   </div>
   <div>
-    <h3 (click)="changeVisibility('--programmes-visibility')">RECORDS</h3>
-    <div class="programmes-box">
-      <nav class="programme-menu">
-        <ul>
-          <li class="programme">
-            <a (click)="setProgramme('Robotics')">Robotics</a>
-          </li>
-          <li>
-            <a (click)="setProgramme('Physics')">Physics</a>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <label for="semesters">Choose semester</label>
-        <select id="semesters">
-          <optgroup label="First year">
-            <option (click)="setSemester(1)">1</option>
-            <option *ngIf="programme == 'Robotics'" (click)="setSemester(2)">2</option>
-          </optgroup>
-          <optgroup *ngIf="programme == 'Robotics'" label="Second year">
-            <option (click)="setSemester(3)">3</option>
-          </optgroup>
-        </select>
-      </div>
+    <h3 (click)="changeVisibility('--records-visibility')">RECORDS</h3>
+    <div class="records-box">
+      <h4>{{programme}} semester {{semester}}</h4>
       <div>
         <table>
           <tr>

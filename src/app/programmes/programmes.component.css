@@ -1,26 +1,39 @@
 :root {
-  --general-visibility: 'none';
-  --programmes-visibility: 'none';
+  --general-visibility: none;
+  --records-visibility: none;
 }
 
 .margins {
+  display: grid;
   padding: 50px;
+  color: white;
+  grid-gap: 20px;
+  --background-color: #a0a0a0;
 }
 
 .margins div {
-  background-color: darkgray;
+  background-color: var(--background-color);
+  border-radius: 4px;
+  padding: 10px;
 }
 
 .general-box {
   display: var(--general-visibility);
+  grid-template-columns: 1fr;
 }
 
-.programmes-box {
-  display: var(--programmes-visibility);
+.records-box {
+  display: var(--records-visibility);
+}
+
+.records-box table th {
+  padding: 10px;
 }
 
 .programme-menu {
   padding: 0;
+  background-color: var(--background-color);
+  border-radius: 4px;
 }
 
 .programme-menu ul {
@@ -29,11 +42,14 @@
 }
 
 .programme {
-  align-content: center;
+  text-align: center;
 }
 
 @media screen and (min-width: 736px) {
   .programme-menu {
     grid-template-columns: 1fr 1fr;
+  }
+  .general-box {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

@@ -40,18 +40,6 @@ nav {
   padding: 7px 7px;
 }
 
-.submenu-element {
-  position: relative;
-}
-
-.submenu-element a {
-  padding: 4px;
-}
-
-.submenu-element a:hover {
-  position: relative;
-}
-
 @media screen and (min-width: 736px){
   .menu-bar {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

@@ -7,8 +7,10 @@
 
 .panel {
   background-color: darkred;
-  padding: 30px 30px;
+  padding: 50px 100px;
   text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
 }
 
 .panel a {
@@ -17,6 +19,6 @@
 
 @media screen and (min-width: 736px) {
   .panel-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }

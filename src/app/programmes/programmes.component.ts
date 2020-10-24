@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./programmes.component.css']
 })
 export class ProgrammesComponent implements OnInit {
-  public programme: string;
+  public programme = 'Robotics';
   public semester: number;
 
   constructor() { }
@@ -24,7 +24,7 @@ export class ProgrammesComponent implements OnInit {
 
   changeVisibility(property: string): void {
     if (getComputedStyle(document.documentElement).getPropertyValue(property) === 'none') {
-      document.documentElement.style.setProperty(property, 'block');
+      document.documentElement.style.setProperty(property, 'grid');
     } else {
       document.documentElement.style.setProperty(property, 'none');
     }
