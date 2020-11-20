@@ -1,5 +1,3 @@
-<!--TODO: FIX INCORRECT LAYOUT AFTER FIRST LOADING-->
-
 <div class="margins">
   <nav class="programme-menu">
     <ul>
@@ -24,7 +22,7 @@
     </select>
   </div>
   <div>
-    <h3 (click)="changeVisibility('--general-visibility')">{{programme}}</h3>
+    <h3 (click)="changeVisibility('--general-visibility')" class="item-title">{{programme}}</h3>
     <div class="general-box">
       <div>
         <h5>GENERAL</h5>
@@ -57,8 +55,8 @@
       </div>
     </div>
   </div>
-  <div>
-    <h3 (click)="changeVisibility('--records-visibility')">RECORDS</h3>
+  <div *ngIf="hasChosen">
+    <h3 (click)="changeVisibility('--records-visibility')" class="item-title">RECORDS</h3>
     <div class="records-box">
       <h4>{{programme}} semester {{semester}}</h4>
       <div>

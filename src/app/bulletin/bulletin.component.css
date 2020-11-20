@@ -1,0 +1,21 @@
+.bulletin-container {
+  padding: 50px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.table-container {
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  padding: 30px;
+  background-color: #909090;
+  border-radius: 4px;
+  width: 1000px;
+}

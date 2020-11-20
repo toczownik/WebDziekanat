@@ -8,14 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class ProgrammesComponent implements OnInit {
   public programme = 'Robotics';
   public semester: number;
+  public hasChosen = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    document.documentElement.style.setProperty('--records-visibility', 'none');
+    document.documentElement.style.setProperty('--general-visibility', 'none');
   }
 
   setSemester(newSemester: number): void {
     this.semester = newSemester;
+    if (!this.hasChosen) {
+      this.hasChosen = true;
+    }
   }
 
   setProgramme(newProgramme: string): void {

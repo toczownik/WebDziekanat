@@ -6,6 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProgrammesComponent } from './programmes/programmes.component';
 import {FormsModule} from '@angular/forms';
+import { BulletinComponent } from './bulletin/bulletin.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: 'programmes',
     component: ProgrammesComponent
+  },
+  {
+    path: 'bulletin',
+    component: BulletinComponent
   },
   {
     path: '',
@@ -27,7 +32,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ProgrammesComponent
+    ProgrammesComponent,
+    BulletinComponent
   ],
   imports: [
     BrowserModule,
